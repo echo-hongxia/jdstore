@@ -1,4 +1,4 @@
-
+<div class="main-content">
 <div class="row">
 <div class="lp-section-1">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -38,8 +38,13 @@
 </div>
 </div>
 <div class="lp-section-2">
-  <h3 class="text-center"> 新特卖早8点晚10点上新 </h3>
-  <div class="row">
+  <div class="ftitle">
+    <div class="mtsize"> 新特卖早8点晚10点上新 </div>
+    <div class="stsize">
+      /大家都在买的好货
+    </div>
+  </div>
+  <div class="row hotpdu">
     <div class="col-xs-12 col-sm-6 col-md-4">
 
         <div class="hotpic">
@@ -79,10 +84,16 @@
         </div>
     </div>
   </div>
-</div>
-<h3 class="text-center"> 新品推荐</h3>
-<div class="lp-section-4">
 
+</div>
+
+<div class="lp-section-4">
+  <div>
+    <div class="mtsize"> 新品推荐 </div>
+    <div class="stsize">
+      /淘淘乐为您精挑细选
+    </div>
+  </div>
   <div class="row">
     <% @products.each do |product|%>
       <div class="col-xs-6 col-md-3">
@@ -90,7 +101,7 @@
           <%= link_to product_path(product) do %>
             <% if product.image.present? %>
               <div class="pic">
-                <%= image_tag(product.image.thumb.url,size: "280x280")%>
+                <%= image_tag(product.image.thumb.url,size: "250x250")%>
               </div>
             <% else %>
               <div class="pic">
@@ -108,4 +119,5 @@
      </div>
     <% end %>
   </div>
+</div>
 </div>

@@ -1,31 +1,43 @@
-<div>
+<div class="searchsec">
+  <div class="search-result">
   <br>
   <% if @products.blank? %>
     <br>
-    <h2 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h2>
+    <div class="search-info-title">搜索信息不能为空，请输入关键字搜索</div>
   <% else %>
-    <h2 class="search-info-title"> 有关"<%= @query_string %>"的产品信息 </h2>
-    <div class="search-result">
+    <div class="search-info-title"> 有关"<%= @query_string %>"的产品信息 </div>
+    <div class="searchpdu">
 
-      <div class="row jobs-show0"></div>
-      <div class="job-table">
-        <% @products.each do |product| %>
-        <div class="row jobs-show">
-
-          <div class="col-md-12 col-lg-9 col-lg-offset-1">
-
-            <div class="pull-right">
-              上新时间：<%= product.created_at.to_date %>
+      <div class="row">
+        <% @products.each do |product|%>
+          <div class="col-xs-6 col-md-3">
+            <div class="item">
+              <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                  <div class="pic">
+                    <%= image_tag(product.image.thumb.url,size: "250x250")%>
+                  </div>
+                <% else %>
+                  <div class="pic">
+                    <%= image_tag("http://placehold.it/200x200&text=NoPic",class: "thumbnail",size: "200x200")%>
+                  </div>
+                <% end %>
+              <% end %>
+              <div class="name">
+                <%= product.title %>
+              </div>
+              <div class="price">
+                ¥ <%= product.price%>
+              </div>
             </div>
-            <p ><%= link_to(render_highlight_content(product,@query_string),product_path(product)) %></p>
-
-          </div>
-        </div>
+         </div>
         <% end %>
+      </div>
       </div>
     </div>
     <div class="text-center">
       <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
     </div>
   <% end %>
+</div><!-- wdt1200-->
 </div>
