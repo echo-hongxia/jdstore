@@ -52,7 +52,7 @@
 .navbar-default .navbar-nav > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -192,8 +192,8 @@
 }
 
 .ftitle {
-
-  margin-bottom: 5px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 .mtsize {
   font-size: 20px;
@@ -424,7 +424,12 @@ margin-bottom: 15px;
     margin: auto;
     height: 400px;
     max-width: 1920px;
-    text-align: center;
+
+    //position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -260px;
+
 }
 
 .carousel-caption h3 {
@@ -485,7 +490,7 @@ margin-bottom: 15px;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 27px;
-	padding: 40px 0 10px;
+	padding: 15px 0 10px;
 	text-transform: uppercase;
 }
 .footer ul {
@@ -606,7 +611,7 @@ margin-bottom: 15px;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+
   margin-bottom: 10px;
   width: 1200px;
 //height: 500px;
@@ -615,8 +620,15 @@ margin-bottom: 15px;
 
 .search-info-title {
   background-color: #fff;
-  font-size: 20px;
-  height: 50px;
+  height: auto;
+  padding: 15px 15px;//上下10px,左右15px
+  line-height: 30px;//文字行高
+  font-size: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.search-result .searchpdu .row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
