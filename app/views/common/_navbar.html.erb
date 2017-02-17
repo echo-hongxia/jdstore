@@ -69,49 +69,47 @@
          </a>
        </div>
       </div>
-     <div class="pull-right searchform">
-       <form  class="form-inline" method="get">
-         <!--<div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>  -->
 
-        <div class="form-group">
-         <div class="input-group">
-            <label class="sr-only" for="exampleInputEmail3">Email address</label>
-           <input type="text" class="form-control" name="keyword" value="" placeholder="输入商品关键词，全球商品快乐购！">
+      <!--form test -->
+       <div class="pull-right searchform">
+           <%= form_tag search_products_path , :method => :get  do %>
+            <div class="input-group" id="search-id" >
+              <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入职位信息">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  搜索
+                </button>
+              </div>
 
-           <span class="input-group-btn">
-             <button type="button" class="btn btn-default">
-               <!--<span class="glyphicon glyphicon-search"></span> -->
-               搜索
-             </button>
-           </span>
+            </div>
+           <% end %>
+
+           <div class="searchstyle" >
+         <div>热门搜索：
          </div>
-       </div>
-       </form><!-- search form -->
+         <div>
+           <a href="#" class="highlight" target="_self">情人节</a>
+         </div>
+         <div>
+           <a href="#" class="highlight" target="_self">防晒</a>
+         </div>
+         <div>
+           <a href="#" class="highlight" target="_self">洗发水</a>
+         </div>
+         <div>
+           <a href="#" class="highlight" target="_self">纸尿裤</a>
+         </div>
+         <div>
+           <a href="#" class="highlight" target="_self">美妆</a>
+         </div>
+         <div>
+           <a href="#" class="highlight" target="_self">奶粉</a>
+         </div>
 
-         <div class="searchstyle" >
-            <div>热门搜索：
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">情人节</a>
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">防晒</a>
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">洗发水</a>
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">纸尿裤</a>
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">美妆</a>
-            </div>
-            <div>
-              <a href="#" class="highlight" target="_self">奶粉</a>
-            </div>
+      </div><!--searchstyle -->
+        </div>
+     <!--form test -->
 
-         </div><!--searchstyle -->
-      </div>
     </div>
    </div>
 

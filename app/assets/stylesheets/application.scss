@@ -155,13 +155,20 @@
 .searchstyle a{
   color: #999;
 }
-.form-inline .input-group  .form-control{
-  //width: auto;
-  width: 350px;
+
+.searchform {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  width: 450px;
+}
+.searchform .input-group .form-control {
+  //width: 350px;
   height: 41px;
   border: 2px solid #EF6C00;
 }
-.form-inline .input-group .btn {
+
+.searchform .input-group .btn {
 
   height: 41px;
   background-color: #EF6C00;
@@ -170,7 +177,6 @@
   //width: 80px;
   border: 2px solid  #EF6C00;
 }
-
 .lp-section-1 {
     //display: block;
   //background-color: #ffffff;
