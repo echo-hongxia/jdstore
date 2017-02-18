@@ -2,7 +2,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
 
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">TaoTaoLe</a>
      </div>
@@ -48,8 +48,9 @@
       </ul>
     </div>
   </div>
-  <div class="logobar">
-   <div class="container-fluid">
+  <div class="logobar secmid">
+
+   <div class="container-fluid wdt1200 ">
      <div class="pull-left">
        <a href="/">
          <img class="logo" src="https://ww1.sinaimg.cn/large/006tNbRwgy1fcox2bbupej307c02tq2y.jpg" alt="快乐购 www.happygo.com">
@@ -68,12 +69,12 @@
           </div> -->
             我的购物车 <i class="fa fa-angle-right"></i>
             <span class="badge"><%= current_cart.products.count %></span>
-         </a>
+        </a>
        </div>
       </div>
 
       <!--form test -->
-       <div class="pull-right searchform">
+      <div class="pull-right searchform">
            <%= form_tag search_products_path , :method => :get  do %>
             <div class="input-group" id="search-id" >
               <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="输入商品关键词，全球商品淘淘乐！">

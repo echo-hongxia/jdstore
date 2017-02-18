@@ -96,13 +96,21 @@
 
 }
 
- .logobar .logo,
-.logobar .activity ,{
+ .logobar .logo {
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 50px;
+
     height: 100px;
 }
+
+
+.logobar .activity ,{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 30px;
+   height: 100px;
+}
+
  .logobar .searchform {
    margin-top: 30px;
    margin-bottom: 10px;
@@ -117,7 +125,7 @@
     padding-left: 60px;
     padding-right: 25px;
     padding-bottom: 10px;
-    margin-right: 30px;
+    //margin-right: 30px;
     background-image: url('https://ww2.sinaimg.cn/large/006tNbRwgy1fcoscmp6fuj30140143yb.jpg');
     background-repeat: no-repeat;
     background-position: left center;
@@ -631,4 +639,25 @@ margin-bottom: 15px;
 .search-result .searchpdu .row {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.ordersec .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+.wdt1200 {
+  width: 1200px;
+}
+
+.secmid {
+  background-position: center 80%;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secbakgrd {
+  background: #f5f5f5;
 }
