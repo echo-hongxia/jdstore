@@ -661,3 +661,158 @@ margin-bottom: 15px;
 .secbakgrd {
   background: #f5f5f5;
 }
+
+////产品详情页
+.gods-detail-box {
+
+  background-color: #fff;
+}
+.gods-detail-box .gods-detail-pic {
+  width: 430px;
+  float: left;
+}
+
+.gods-detail-box .gods-detail-info {
+  float: right;
+  width: 750px;
+
+  background-color: #fff;
+}
+
+.goodsbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 102px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.history-box {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    //background-color: #fff;
+
+}
+
+.detail-box {
+    float: right;
+    width: 980px;
+    //background-color: #fff;
+
+}
+
+.goodsbar .goods .pic {
+    display: inline;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+}
+
+.goodsbar .goods .name {
+  display: inline;
+  float: right;
+  margin-left: 10px;
+  width: 208px;
+  height: 60px;
+  font-size: 12px;
+}
+.goods-detail-sec .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.history-box .title {
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+.goods-detail-sec .history-box ul {
+  padding: 0px;
+
+}
+
+.goods-detail-sec .history-box .item .pic {
+  position: relative;
+  padding: 20px 20px 30px 20px;
+}
+
+.detail-box .params-box {
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.detail-box .advantage-box{
+  background-color: #fff;
+}
+
+.detail-box .descr-box {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.detail-box .advantage-box .item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 33.333333%;
+    text-align: center;
+    float: left;
+}
+
+.goods-detail-sec .breadcrumb > li + li:before {
+  content: "";
+  padding: 0px;
+}
+
+.goods-detail-sec .breadcrumb {
+  margin-bottom: 0px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.goods-detail-sec .descr-box {
+  background-color: #fff;
+}
+
+.gods-detail-box .gods-detail-info .price-box {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+.goods-params {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 28px;
+}
+.goods-params .params-key {
+    float: left;
+    padding-left: 15px;
+    width: 16%;
+    color: #999;
+}
+
+.goods-params .params-value {
+    position: relative;
+    float: right;
+    width: 84%;
+}
+.goods-params .params-value .sale-price {
+    position: relative;
+    top: -2px;
+    left: -7px;
+    font-size: 26px;
+    color: #fd5400;
+}

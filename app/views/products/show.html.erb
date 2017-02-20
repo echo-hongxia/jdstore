@@ -1,28 +1,196 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
-    </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-        <% if @product.quantity.present? && @product.quantity > 0 %>
-          <%= link_to("加入购物车", add_to_cart_product_path(@product), method: :post,
-                    class: "btn btn-lg btn-danger") %>
-       <% else %>
-          已销售一空，无法购买
-       <% end %>
+<div class="goods-detail-sec secbakgrd ">
+  <div class="secmid ">
 
-    </div>
+    <div class="container-fluid wdt1200 ">
+    	<ul class="breadcrumb">
+      	<li class="note-color">您的位置：</li>
+        <li><a href="/">首页</a></li>
+        <li class="divider-sm">/</li>
+        <li class="active"><%= @product.title %></li>
+      </ul>
+    </div> <!--breadcrumb -->
+
+    <div class="gods-detail-box">
+      <div class="container-fluid wdt1200 ">
+          <div class="gods-detail-pic">
+              <% if @product.image.present? %>
+                <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+              <% end %>
+          </div><!--gods-detail-pic -->
+          <div class="gods-detail-info">
+            <h3> <%= @product.title %> </h3>
+            <p class="desc">
+                <%= @product.description %>
+            </p>
+            <div class="price-box">
+              <div class="goods-params">
+                 <div class="params-key">
+                   售价
+                 </div>
+                 <div class="params-value">
+                   <strong class="sale-price"> ¥<%= @product.price %></strong>
+                 </div>
+              </div>
+
+              <div class="goods-params">
+                 <div class="params-key">
+                   市场价
+                 </div>
+                 <div class="params-value">
+                   <del> ¥469</del>
+                 </div>
+              </div>
+            </div>
+
+            <div>
+              数量 : <%= @product.quantity %>
+            </div>
+
+            <div class="">
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+                <%= link_to("加入购物车", add_to_cart_product_path(@product), method: :post,
+                    class: "btn btn-lg btn-danger") %>
+             <% else %>
+                已销售一空，无法购买
+             <% end %>
+           </div>
+         </div> <!--gods-detaile-info -->
+       </div>
+    </div><!-- gods-detail-box-->
+
+    <div class="goodsbar j_goodsbar">
+    	<div class="container wdt1200 ">
+      	<div class="pull-left goods">
+        	<div class="pic">
+            <%= image_tag(@product.image.medium.url, size: "58x58" ) %>
+          </div>
+          <div class="name">
+          	<h6><%= @product.title%></h6>
+            <strong>本店价：￥<%= @product.price %></strong>
+          </div>
+        </div>
+        <h4 class="pull-left tab-nav" data-target="#J_tabContentItemDetail">
+        	<a class="">商品详情</a>
+        	<a class="">买家评价（0）</a>
+        </h4>
+        <div class="pull-right btns">
+        	                    <!--<button class="btn btn-primary" type="button">立即购买</button>-->
+          <button class="btn btn-primary j_addCart" type="button" data-auto="0">
+            <i class="fa fa-cart-plus"></i> 加入购物车
+          </button>
+          </div>
+        </div>
+    </div><!-- goodsbar -->
+
+    <div class="container-fluid wdt1200 ">
+        <div class="history-box">
+          <div class="title">
+            <span>看了又看</span>
+          </div>
+
+          <ul class="goods-list has-space">
+            <li>
+              <a class="item" href="#">
+                <div class="pic">
+                  <%= image_tag(@product.image.medium.url, size: "160x160" ) %>
+                </div>
+                <div class="name">
+                 <%= @product.title%>
+                </div>
+                <div class="price">
+                  <strong> <%= @product.price %></strong>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a class="item" href="#">
+                <div class="pic">
+                  <%= image_tag(@product.image.medium.url, size: "160x160" ) %>
+                </div>
+                <div class="name">
+                 <%= @product.title%>
+                </div>
+                <div class="price">
+                  <strong> <%= @product.price %></strong>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a class="item" href="#">
+                <div class="pic">
+                  <%= image_tag(@product.image.medium.url, size: "160x160" ) %>
+                </div>
+                <div class="name">
+                 <%= @product.title%>
+                </div>
+                <div class="price">
+                  <strong> <%= @product.price %></strong>
+                </div>
+              </a>
+            </li>
+
+          </ul>  <!-- goods-list -->
+
+        </div><!-- history-box 历史产品记录-->
+        <div class="detail-box">
+          <div class="params-box">
+            <strong>产品名称：</strong>
+            <%= @product.title%>
+          </div>
+
+          <div class="shopping-box">
+
+          </div>
+
+          <div class="advantage-box">
+            <div class="item">
+              <h3> <strong> 原装正品100%</strong></h3>
+              <p>
+                “淘淘乐自营”
+                <br>
+                "海外直接采购，全程政府监管"
+              </p>
+            </div>
+
+            <div class="item">
+              <h3> <strong> 原装正品100%</strong></h3>
+              <p>
+                “淘淘乐自营”
+                <br>
+                "海外直接采购，全程政府监管"
+              </p>
+            </div>
+
+            <div class="item">
+              <h3> <strong> 原装正品100%</strong></h3>
+              <p>
+                “淘淘乐自营”
+                <br>
+                "海外直接采购，全程政府监管"
+              </p>
+            </div>
+
+          </div>
+
+          <div class="descr-box">
+            <p>
+                <img src="https://img.youkastation.com/data/images/upload/Image//14850676356153.jpg"  style="line-height: 22.8571px; white-space: normal;">
+               <img src="https://img.youkastation.com/data/images/upload/Image//14850675942303.jpg"  style="">
+               <img src="https://img.youkastation.com/data/images/upload/Image//14850675968810.jpg"  style="line-height: 1.42857;">
+               <img src="https://img.youkastation.com/data/images/upload/Image//14850675972305.jpg">
+            </p>
+
+          </div>
+        </div> <!-- 产品详情页-->
+
+        <!--<div class="comment-box">
+          fff
+        </div> --><!-- 产品评论页-->
+    </div><!--detail container-fluid -->
+
   </div>
 </div>
