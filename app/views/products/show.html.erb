@@ -51,7 +51,7 @@
             <div class="">
               <% if @product.quantity.present? && @product.quantity > 0 %>
                 <%= link_to("加入购物车", add_to_cart_product_path(@product), method: :post,
-                    class: "btn btn-lg btn-danger") %>
+                    class: "btn btn-lg btn-primary") %>
              <% else %>
                 已销售一空，无法购买
              <% end %>
@@ -67,14 +67,14 @@
             <%= image_tag(@product.image.medium.url, size: "58x58" ) %>
           </div>
           <div class="name">
-          	<h6><%= @product.title%></h6>
+          	<div class="nav-name"><%= @product.title%></div>
             <strong>本店价：￥<%= @product.price %></strong>
           </div>
         </div>
-        <h4 class="pull-left tab-nav" data-target="#J_tabContentItemDetail">
-        	<a class="">商品详情</a>
-        	<a class="">买家评价（0）</a>
-        </h4>
+        <h3 class="pull-left tab-nav" data-target="#J_tabContentItemDetail">
+        	<a class=" item nav-item active fontlink" href="#">商品详情</a>
+        	<a class=" item nav-item fontlink">买家评价（0）</a>
+        </h3>
         <div class="pull-right btns">
         	                    <!--<button class="btn btn-primary" type="button">立即购买</button>-->
           <button class="btn btn-primary j_addCart" type="button" data-auto="0">
